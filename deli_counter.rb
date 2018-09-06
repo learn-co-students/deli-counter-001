@@ -1,10 +1,10 @@
-katz_deli = []
 
 def line(deli)
   if deli.empty?
      puts "The line is currently empty."
    else
-     queue_list = deli.map.with_index{|name, index| "#{index + 1}. #{name}"}.join(' ') #uses index & element to created numbered list then convert to string
+     # Uses index & element to created numbered list then convert to string
+     queue_list = deli.map.with_index{|name, index| "#{index + 1}. #{name}"}.join(' ')
 
      puts "The line is currently: #{queue_list}"
   end
@@ -19,6 +19,7 @@ def now_serving(deli)
   if deli.empty?
     puts "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{deli.shift}." # Permenantly remove the first name on the list and show that name as well.
+    # Permenantly remove the first name on the list and show that name as well
+    puts "Currently serving #{deli.shift}."
   end
 end
